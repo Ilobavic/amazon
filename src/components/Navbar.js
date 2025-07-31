@@ -10,10 +10,11 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaShoppingCart, FaSearch, FaShoppingBag } from "react-icons/fa";
+import { useCart } from "../context/CartContext";
 
 function AppNavbar() {
-  // Placeholder for cart count
-  const cartCount = 0;
+  const { cart } = useCart();
+  const cartCount = cart.reduce((sum, item) => sum + item.qty, 0);
 
   return (
     <Navbar

@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
+import { CartProvider } from "./context/CartContext";
 import AppNavbar from "./components/Navbar";
 import LandingPage from "./pages/LandingPage";
 import HomePage from "./pages/HomePage";
@@ -10,16 +11,18 @@ import CheckoutPage from "./pages/CheckoutPage";
 
 function App() {
   return (
-    <Router>
-      <AppNavbar />
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/product/:id" element={<ProductPage />} />
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="/checkout" element={<CheckoutPage />} />
-      </Routes>
-    </Router>
+    <CartProvider>
+      <Router>
+        <AppNavbar />
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+        </Routes>
+      </Router>
+    </CartProvider>
   );
 }
 
