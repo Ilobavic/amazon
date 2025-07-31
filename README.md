@@ -1,3 +1,41 @@
+# ReactCommerce – Amazon-Style eCommerce Frontend
+
+This project is a fully responsive Amazon-style eCommerce frontend built with React, React-Bootstrap, HTML/CSS, and JavaScript. It features:
+
+- Landing page with a carousel of featured products
+- Home page with a grid of all products
+- Product detail pages
+- Shopping cart with adjustable quantities
+- Checkout form (dummy, no backend)
+- Routing with React Router
+- State management using useState/useReducer
+
+## Getting Started
+
+1. Install dependencies:
+   ```sh
+   npm install
+   ```
+2. Start the development server:
+   ```sh
+   npm start
+   ```
+
+## Folder Structure
+
+- `src/components/` – Reusable UI components (Navbar, Carousel, ProductCard, etc.)
+- `src/pages/` – Main pages (Home, Product, Cart, Checkout)
+- `src/data/` – Static product data
+
+## Tech Stack
+
+- React
+- React-Bootstrap & Bootstrap
+- React Router DOM
+- HTML/CSS/JS
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
